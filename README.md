@@ -167,6 +167,17 @@
         <a href="dokumen/algoritma_lingkaran.pdf" target="_blank" style="color:#ffdd00;">Lihat PDF</a>
       </p>
     </div>
+
+    <div class="project">
+      <h3>Algoritma Kurva Bezier Kuadratik</h3>
+      <p>Membuat konten infografis dan video edukasi untuk Instagram dengan gaya menarik dan informatif.</p>
+      <p><strong>Link Video:</strong> 
+        <a href="https://youtu.be/DwqRXbxn7tE" target="_blank" style="color:#ffdd00;">Tonton Video</a>
+      </p>
+      <p><strong>Dokumen PDF:</strong> 
+        <a href="dokumen/Algoritma_Kurva.pdf" target="_blank" style="color:#ffdd00;">Lihat PDF</a>
+      </p>
+    </div>
   </section>
   
   
