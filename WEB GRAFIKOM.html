@@ -14,15 +14,18 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0077b6, #90e0ef);
-      color: #fff;
+      background-image: url('https://i.ibb.co/hg03whx/bg-pink-strawberry.png');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #ff69b4;
+      position: relative;
     }
 
     header {
-      background-color: #03045e;
+      background-color: #ffc0cb;
       text-align: center;
       padding: 60px 20px;
-      color: #ffdd00;
+      color: #ff1493;
     }
 
     header h1 {
@@ -32,11 +35,10 @@
 
     header p {
       font-size: 1.2em;
-      color: #ffffff;
     }
 
     nav {
-      background-color: #ffdd00;
+      background-color: #fff0f5;
       padding: 15px 0;
       text-align: center;
     }
@@ -53,24 +55,27 @@
     nav ul li a {
       text-decoration: none;
       font-weight: bold;
-      color: #03045e;
+      color: #d63384;
       transition: 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #0077b6;
+      color: #ff69b4;
     }
 
     section {
       padding: 50px 20px;
       max-width: 900px;
       margin: auto;
+      background-color: rgba(255, 240, 245, 0.85);
+      border-radius: 15px;
+      margin-bottom: 40px;
     }
 
     section h2 {
       font-size: 2.2em;
       text-align: center;
-      color: #ffdd00;
+      color: #ff1493;
       margin-bottom: 30px;
     }
 
@@ -78,11 +83,12 @@
       text-align: center;
       font-size: 1.1em;
       margin-bottom: 20px;
+      color: #d63384;
     }
 
     .project {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-left: 5px solid #ffdd00;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-left: 5px solid #ff69b4;
       border-radius: 10px;
       padding: 20px;
       margin: 15px 0;
@@ -90,22 +96,65 @@
     }
 
     .project:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 1);
       transform: translateY(-5px);
     }
 
+    .project h3 {
+      color: #e91e63;
+    }
+
+    a {
+      color: #e91e63;
+    }
+
     footer {
-      background-color: #03045e;
-      color: #ccc;
+      background-color: #ffc0cb;
+      color: #fff;
       text-align: center;
       padding: 20px;
+      font-weight: bold;
+    }
+
+    /* Animasi dekorasi */
+    .dekorasi {
+      position: fixed;
+      width: 50px;
+      z-index: 9999;
+      animation: jatuh 10s linear infinite;
+    }
+
+    .dekorasi.strawberry {
+      content: url('https://i.ibb.co/hRXcrCW/strawberry.png');
+    }
+
+    .dekorasi.love {
+      content: url('https://i.ibb.co/tD9KMS4/love.png');
+    }
+
+    .dekorasi.ribbon {
+      content: url('https://i.ibb.co/J3LvPqk/ribbon.png');
+    }
+
+    .dekorasi.doll {
+      content: url('https://i.ibb.co/ZVrgPGw/doll.png');
+    }
+
+    @keyframes jatuh {
+      0% {
+        top: -10%;
+        left: calc(100% * var(--pos));
+      }
+      100% {
+        top: 120%;
+        left: calc(100% * var(--pos));
+      }
     }
 
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
       }
-
       nav ul li {
         display: block;
         margin: 10px 0;
@@ -115,82 +164,95 @@
 </head>
 <body>
 
+  <div class="dekorasi strawberry" style="--pos: 0.1"></div>
+  <div class="dekorasi love" style="--pos: 0.3"></div>
+  <div class="dekorasi ribbon" style="--pos: 0.5"></div>
+  <div class="dekorasi doll" style="--pos: 0.7"></div>
+  <div class="dekorasi strawberry" style="--pos: 0.9"></div>
+
   <header>
-    <h1>Novilia Azizah</h1>
-    <p>Mahasiswa | Content kreator | Freelancer</p> 
+    <h1>Novilia Azizah 🌸🍓💖</h1>
+    <p>Mahasiswa | Content Kreator | Freelancer</p> 
   </header>
-  
+
   <nav>
     <ul>
       <li><a href="#about">Tentang Saya</a></li>
       <li><a href="#projects">Proyek</a></li>
+      <li><a href="#assignments">Tugas</a></li>
       <li><a href="#contact">Kontak</a></li>
     </ul>
   </nav>
 
   <section id="about">
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah seorang mahasiswa di Universitas Lampung yang tertarik pada dunia pendidikan, teknologi, dan freelance.</p>
+    <h2>Tentang Saya ✨</h2>
+    <p>Saya adalah seorang mahasiswa di Universitas Lampung, dari Program Study Pendidikan Teknologi Informasi yang tertarik pada dunia pendidikan, teknologi, dan freelance 🎀.</p>
   </section>
-  
+
   <section id="projects">
-    <h2>Proyek</h2>
-    
+    <h2>Proyek  📖</h2>
+
     <div class="project">
-      <h3>Tokoh perintis Grafika Komputer</h3>
-      <p>Membangun website pembelajaran untuk siswa dengan fitur kuis dan animasi sederhana.</p>
-      <p><strong>Link Video:</strong> 
-        <a href="https://drive.google.com/file/d/12mOyNouk2lCzW5hYaROBzQfiPBsByYjO/view?usp=drivesdk" target="_blank" style="color:#ffdd00;">Tonton Video</a>
-      </p>
-      <p><strong>Dokumen PDF:</strong> 
-        <a href="dokumen/tokoh_perintis.pdf" target="_blank" style="color:#ffdd00;">Lihat PDF</a>
-      </p>
+      <h3>Tokoh Perintis Grafika Komputer</h3>
+      <p><strong>Link Video:</strong> <a href="https://drive.google.com/file/d/12mOyNouk2lCzW5hYaROBzQfiPBsByYjO/view?usp=drivesdk" target="_blank">Tonton Video</a></p>
+      <p><strong>Dokumen PDF:</strong> <a href="dokumen/tokoh_perintis.pdf" target="_blank">Lihat PDF</a></p>
     </div>
-  
+
     <div class="project">
-      <h3>Algoritma garis </h3>
-      <p>Membuat konten infografis dan video edukasi untuk Instagram dengan gaya menarik dan informatif.</p>
-      <p><strong>Link Video:</strong> 
-        <a href="https://youtu.be/b8bElH7BhOM?si=pzXMCL_LYP8uE7fq" target="_blank" style="color:#ffdd00;">Tonton Video</a>
-      </p>
-      <p><strong>Dokumen PDF:</strong> 
-        <a href="dokumen/algoritma_garis.pdf" target="_blank" style="color:#ffdd00;">Lihat PDF</a>
-      </p>
+      <h3>Algoritma Garis</h3>
+      <p><strong>Link Video:</strong> <a href="https://youtu.be/b8bElH7BhOM?si=pzXMCL_LYP8uE7fq" target="_blank">Tonton Video</a></p>
+      <p><strong>Dokumen PDF:</strong> <a href="dokumen/algoritma_garis.pdf" target="_blank">Lihat PDF</a></p>
     </div>
 
     <div class="project">
       <h3>Algoritma Lingkaran Bresenham dan Midpoint</h3>
-      <p>Membuat konten infografis dan video edukasi untuk Instagram dengan gaya menarik dan informatif.</p>
-      <p><strong>Link Video:</strong> 
-        <a href="https://youtu.be/XoOciMumEjI?si=BrSa2dNL6WdD4Nzt" target="_blank" style="color:#ffdd00;">Tonton Video</a>
-      </p>
-      <p><strong>Dokumen PDF:</strong> 
-        <a href="dokumen/algoritma_lingkaran.pdf" target="_blank" style="color:#ffdd00;">Lihat PDF</a>
-      </p>
+      <p><strong>Link Video:</strong> <a href="https://youtu.be/XoOciMumEjI?si=BrSa2dNL6WdD4Nzt" target="_blank">Tonton Video</a></p>
+      <p><strong>Dokumen PDF:</strong> <a href="dokumen/algoritma_lingkaran.pdf" target="_blank">Lihat PDF</a></p>
     </div>
 
     <div class="project">
       <h3>Algoritma Kurva Bezier Kuadratik</h3>
-      <p>Membuat konten infografis dan video edukasi untuk Instagram dengan gaya menarik dan informatif.</p>
-      <p><strong>Link Video:</strong> 
-        <a href="https://youtu.be/DwqRXbxn7tE" target="_blank" style="color:#ffdd00;">Tonton Video</a>
-      </p>
-      <p><strong>Dokumen PDF:</strong> 
-        <a href="dokumen/Algoritma_Kurva.pdf" target="_blank" style="color:#ffdd00;">Lihat PDF</a>
-      </p>
+      <p><strong>Link Video:</strong> <a href="https://youtu.be/DwqRXbxn7tE" target="_blank">Tonton Video</a></p>
+      <p><strong>Dokumen PDF:</strong> <a href="dokumen/Algoritma_Kurva.pdf" target="_blank">Lihat PDF</a></p>
     </div>
   </section>
-  
-  
+
+  <section id="assignments">
+    <h2>Proyek  📖</h2>
+
+    <div class="project">
+      <h3>Kuis 1: Persamaan Misteri</h3>
+      <p><strong>Dokumen PDF:</strong> <a href="dokumen/persamaan_misteri.pdf" target="_blank">Lihat PDF</a></p>
+    </div>
+
+    <div class="project">
+      <h3>Kuis 2: Transformasi 2D</h3>
+      <p><strong>Link Video:</strong> <a href="https://youtu.be/YsH4NsyW4RU?si=vf2n6ENpu5OPzFbX" target="_blank">Tonton Video</a></p>
+      <p><strong>Link Spreadsheet:</strong> <a href="https://docs.google.com/spreadsheets/d/1LPcprn4jaXFUxJKmN0ocsdAnv-eJOCJwXM5ob9T-7Sk/edit?gid=0#gid=0" target="_blank">Lihat Spreadsheet</a></p>
+      <p><strong>Dokumen PDF:</strong> <a href="dokumen/transformasi_2D.pdf" target="_blank">Lihat PDF</a></p>
+    </div>
+
+    <div class="project">
+      <h3>Kuis 3: Line Clipping Algorithm</h3>
+      <p><strong>Link Video:</strong> <a href="https://youtu.be/S1_wGkqpwJw?si=-WRrqZUhyNXJS7hS" target="_blank">Tonton Video</a></p>
+      <p><strong>Link Spreadsheet:</strong> <a href="https://docs.google.com/spreadsheets/d/1MwoTALn2j6qMPaSG5qzpLgP2Jg7T0G69aUNPZ46if9Q/edit?gid=263543710#gid=263543710" target="_blank">Lihat Spreadsheet</a></p>
+      <p><strong>Dokumen PDF:</strong> <a href="dokumen/kuis3_lineCA.pdf" target="_blank">Lihat PDF</a></p>
+    </div>
+
+    <div class="project">
+      <h3>Kuis 4: Polygon Clipping Algorithm</h3>
+      <p><strong>Link Video:</strong> <a href="https://youtu.be/cPZnM_574d8" target="_blank">Tonton Video</a></p>
+    </div>
+  </section>
+
   <section id="contact">
-    <h2>Kontak</h2>
-    <p>Email: <a href="mailto:noviliaazizah60@gmail.com" style="color:#ffdd00;">noviliaazizah60@gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/novilia_azizah?igsh=MjVzZ2M0a3h6eWcy" target="_blank" style="color:#ffdd00;">https://www.instagram.com/novilia_azizah?igsh=MjVzZ2M0a3h6eWcy</a></p>
+    <h2>Kontak 📞</h2>
+    <p>Email: <a href="mailto:noviliaazizah600@gmail.com">noviliaazizah600@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/novilia_azizah?igsh=MjVzZ2M0a3h6eWcy" target="_blank">@novilia_azizah</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Novilia Azizah | Dibuat dengan 💙 & 💛
+    &copy; 2025 Novilia Azizah | Semangat Belajar 🌸🍓💖
   </footer>
-
 </body>
 </html>
